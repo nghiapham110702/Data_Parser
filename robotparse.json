@@ -1,0 +1,247 @@
+{
+    "File path for the user to choose" : "type of files want to open",
+
+
+        "LOG_MSGS_FILE": "LogMsgs.txt",
+
+        "CSV_READINGS_FILE" : "ProxReadings.csv",
+
+        "LOG_DATA_DIR" : "LogData",
+
+
+    "This is all the input were written for his own functions by Ron Domingo(just comment)": "Moving all of these input into Json",
+
+        "LOG_MSGS_ERRORS" : {
+
+                "TOTAL_CLEANING_TIME": ["Total Cleaning time", "The total cleaning time in seconds (this is not actually an error)"],
+                "TOTAL_PAUSED_TIME": ["Total Paused time", "The total paused time in seconds (this is not actually an error)"],
+                "AUTONOMOUS_DOCK": ["Autonomous dock", "Indicator that robot docked autonomously"],
+                "AVG_EXT_VOLTAGE_AFTER_RECONNECT": ["Connected to the power", "Average external voltage of 10 samples after robot is reconnected to base"],
+                "GLOBAL_REPLAN_HOME": ["Attempting to return home after a fail.", "The number of times the global path home was recalculated"],
+                "COMPLETE_CLEANING_RUN": ["EVENT_CLEANING_DONE", "Indicator that the robot has finished cleaning (this is not actually an error)"],
+                "CANCEL_CLEANING_RUN": [["EVENT_CANCEL_CLEANING", "CLEANING_CANCEL", "CLEANING_RETURN_TO_BASE"], "Indicator that the cleaning has been canceled"],
+                "ERROR_RAISED": ["Setting alert", "Indicator that an alert or error has been set"],
+                "TILT_LOCALIZATION": ["Triggering relocalization - tilt", "Indicator that the robot is tilted"],
+                "TIME_OUT": ["TimedReceivePrivate: Connection timed out", "A message from the HAL did not arrive within the allotted time (currently 30 ms)"],
+                "NO_MESSAGE": ["A new message did not arrive in time!  What should we do?!?!?!", "A message from the HAL did not arrive within the allotted time (currently 30 ms)"],
+                "FALSE_LDS_TRIGGER": ["Prevented a false LDS trigger", "Something"],
+                "SOFTWARE_WATCHDOG": ["software_wdt.cc", "A watchdog timer was tripped"],
+                "NAVIGATION_FALLING": ["Setting alert NAVIGATION_FALLING with severity ALERT_ERROR", "Indicator that the robot believes it is falling"],
+                "PICKED_UP": ["Setting alert PICKED_UP with severity ALERT_ERROR", "Indicator that the robot was picked up"],
+                "CLEANING_START": [
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to CLEANING_START",
+                    "Indicator that the cleaning start command was received"
+                ],
+                
+                "SUSPENDED_CHARGING_START": [
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to SUSPENDED_CHARGING_START",
+                    "Indicator that the robot started charging for suspended cleaning"
+                ],
+                "UNDOCKING": [
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to UNDOCKING",
+                    "Indicator that the robot undocked at the beginning of the cleaning run"
+                ],
+                "UNDOCKING_AFTER_SUSPENDED": [
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to UNDOCKING_AFTER_SUSPENDED",
+                    "Indicator that the robot undocked after suspended cleaning"
+                ],
+                "ACTIVE_CLEANING_SESSION": [
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to ACTIVE_CLEANING_SESSION",
+                    "Indicator that the cleaning has begun"
+                ],
+                "ACTIVE_CLEANING_AFTER_SUSPENDED": [
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to ACTIVE_CLEANING_AFTER_SUSPENDED",
+                    "Indicator that the cleaning has begun after suspended charging"
+                ],
+                "DOCKING": [
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to DOCKING",
+                    "Indicator that the robot transitioned to DOCKING after reaching the prep point"
+                ],
+                "DOCKING_FOR_SUSPENDED": [
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to DOCKING_FOR_SUSPENDED",
+                    "Indicator that the robot transitioned to DOCKING after reaching the prep point for suspended charging"
+                ],
+                "DOCKING_VERIFY_BASE": [
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to DOCKING_VERIFY_BASE",
+                    "Indicator that the robot transitioned to DOCKING after triggering EVENT_VERIFY_BASE"
+                ],
+                "DOCKING_SUCCESSFUL": [
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to DOCKING_SUCCESSFUL",
+                    "Indicator that the robot docked succesfully"
+                ],
+                "DOCKING_SUCCESSFUL_SUSPENDED":[
+                    "AUTONOMY STATES changed in SetAutonomyStateTimestamp due to DOCKING_SUCCESSFUL_SUSPENDED",
+                    "Indicator that the robot docked succesfully for suspended cleaning"
+                ],
+                "STARTED_ON_BASE": [
+                    "AUTONOMY STATES: started_on_base: 1",
+                    "Flag indicating the robot started on base"
+                ],
+                "STARTED_OFF_BASE": [
+                    "AUTONOMY STATES: started_on_base: 0",
+                    "Flag indicating the robot started off base"
+                ],
+                "STARTED_ON_BASE_UNDOCKING": [
+                    "Has robot started docked?: (1)",
+                    "Indicator that the robot started cleaning from the charge base (printed during UNDOCKING)"
+                ],
+                "STARTED_OFF_BASE_UNDOCKING": [
+                    "Has robot started docked?: (0)",
+                    "Indicator that the robot started cleaning off the charge base (printed during UNDOCKING)"
+                ],
+                "STARTED_OFF_BASE_CLG_START": [
+                    "Cannot start a persistent cleaning when the robot is not on the base",
+                    "Indicator that robot started off the base (printed during CLEANING_START"
+                ],
+                "SVC_TRANSITIONS_CANCEL_RUN": [
+                    "Fire event EVENT_CANCEL_CLEANING from (svc_transitions.cc",
+                    "Indicator that robot auto-canceled the cleaning run"
+                ],
+                "DOCKED_CANCEL": [
+                    "DetectRobotDocked: Robot was docked while actively cleaning. Cancelling the cleaning run...",
+                    "Indicator that the robot was docked which canceled the cleaning run"
+                ],
+                "SUSPENDED_AUTONOMY_STATES_RESET": [
+                    "AUTONOMY STATES changed in ResetSuspendedCleaningAutonomyStates",
+                    "Indicator that the suspended cleaning autonomy states have beenargs = parser.parse_args()reset for another suspended cleaning"
+                ]
+        },
+        
+        "POSE_ERROR_FIELDS_OF_INTEREST" : {
+            "ROBOT_STATIONARY_ERROR": ["smooth_x(mm)", "smooth_y(mm)"]
+        },  
+
+        "AUTONOMY_CSV_HEADER": ["LOG_NAME", "BUILD_VERSION",
+        "CLEANING_START", "SUSPENDED_CHARGING_START", "CLEANING_START (sum)",
+        "UNDOCKING", "UNDOCKING_AFTER_SUSPENDED", "UNDOCKING (sum)",
+        "ACTIVE_CLEANING_SESSION", "ACTIVE_CLEANING_AFTER_SUSPENDED", "ACTIVE_CLEANING_SESSION (sum)",
+        "DOCKING", "DOCKING_FOR_SUSPENDED", "DOCKING_VERIFY_BASE", "DOCKING (sum)",
+        "DOCKING_SUCCESSFUL", "DOCKING_SUCCESSFUL_SUSPENDED", "DOCKING_SUCCESSFUL (sum)"],
+
+        "AUTONOMY_COLUMN_ADDITIONS":{
+                "CLEANING_START (sum)": ["CLEANING_START", "SUSPENDED_CHARGING_START"],
+                "UNDOCKING (sum)": ["UNDOCKING", "UNDOCKING_AFTER_SUSPENDED"],
+                "ACTIVE_CLEANING_SESSION (sum)": ["ACTIVE_CLEANING_SESSION", "ACTIVE_CLEANING_AFTER_SUSPENDED"],
+                "DOCKING (sum)": ["DOCKING', 'DOCKING_FOR_SUSPENDED", "DOCKING_VERIFY_BASE"],
+                "DOCKING_SUCCESSFUL (sum)": ["DOCKING_SUCCESSFUL", "DOCKING_SUCCESSFUL_SUSPENDED"]
+        },
+        "AUTONOMY_SUSPENDED_STATES" : [
+                "SUSPENDED_CHARGING_START",
+                "UNDOCKING_AFTER_SUSPENDED",
+                "ACTIVE_CLEANING_AFTER_SUSPENDED",
+                "DOCKING_FOR_SUSPENDED",
+                "DOCKING_SUCCESSFUL_SUSPENDED"
+                ],
+        "TRANSITIONS_CSV_HEADER" : ["Autonomy dropoff", "Log name", "Version", "Ticket", "Assigned to", "Issue description"],
+        
+        "AUTONOMY_TRANSITIONS" : {
+                "Cleaning Start → Undocking": ["CLEANING_START (sum)", "UNDOCKING (sum)"], 
+                "Undocking → Active cleaning": ["UNDOCKING (sum)", "ACTIVE_CLEANING_SESSION (sum)"],
+                "Active cleaning → docking": ["ACTIVE_CLEANING_SESSION (sum)", "DOCKING (sum)"],
+                "Docking → Docking successful": ["DOCKING (sum)","DOCKING_SUCCESSFUL (sum)" ]
+        },
+        "PROX_ERROR_FIELDS_OF_INTEREST" : {
+                "TOF_SENSOR_ERRORS": ["left_drop_raw", "right_drop_raw", "rear_drop_raw", "wall_follow"],
+                "PROX_READINGS_LOGGING_GAP": ["TimeInMS"],
+                "STALE_TOF_READINGS": ["left_drop_raw", "right_drop_raw", "wall_follow"],
+                "EXTERNAL_VOLTAGE": ["external_voltage"]
+
+        },
+        "TOF_ERROR_CODES" : {
+            "0x8000": ["TOF_SENSOR_ERROR_I2C", "TODO: Add a description of this error"],
+            "0x8100": ["TOF_SENSOR_ERROR_VCSEL_CONTINUITY_TEST", "TODO: Add a description of this error"],
+            "0x8200": ["TOF_SENSOR_ERROR_VCSEL_WATCHDOG_TEST", "TODO: Add a description of this error"],
+            "0x8300": ["TOF_SENSOR_ERROR_VCSEL_WATCHDOG", "TODO: Add a description of this error"],
+            "0x8400": ["TOF_SENSOR_ERROR_PLL1_LOCK", "TODO: Add a description of this error"],
+            "0x8500": ["TOF_SENSOR_ERROR_PLL2_LOCK", "TODO: Add a description of this error"],
+            "0x8600": ["TOF_SENSOR_ERROR_EARLY_CONVERGENCE_ESTIMATE", "TODO: Add a description of this error"],
+            "0x8700": ["TOF_SENSOR_ERROR_MAX_CONVERGENCE", "TODO: Add a description of this error"],
+            "0x8800": ["TOF_SENSOR_ERROR_NO_TARGET_IGNORE", "TODO: Add a description of this error"],
+            "0x8b00": ["TOF_SENSOR_ERROR_MAX_SIGNAL_TO_NOISE_RATIO", "TODO: Add a description of this error"],
+            "0x8c00": ["TOF_SENSOR_ERROR_RAW_RANGING_ALGO_UNDERFLOW", "TODO: Add a description of this error"],
+            "0x8d00": ["TOF_SENSOR_ERROR_RAW_RANGING_ALGO_OVERFLOW", "TODO: Add a description of this error"],
+            "0x8e00": ["TOF_SENSOR_ERROR_RANGING_ALGO_UNDERFLOW", "TODO: Add a description of this error"],
+            "0x8f00": ["TOF_SENSOR_ERROR_RANGING_ALGO_OVERFLOW", "TODO: Add a description of this error"]
+        },
+
+    "This is just comment for how to run the function in Json for Log.txt" : " If want to run specific just type true or false to run the function, and put in the data want to be parse",
+
+        "specific_message" : false,
+
+        "Custom_Error" : ["Area cleaned:"],
+
+
+    "This is just comment for graphing CSV data" : " If want to run just type either true or false in the boolean variable below to run the function",
+
+    "Please Run the this for the first time": "The reason is that you want to get the timestamp in order to graph",
+
+    "If want to graph specific timestamps" :"put the range of time for start time and end time and then put the specific data user want to graph",
+    
+    "Note": "Please don't erase (TimeInMs) in the custom_prox_data, just leave it how it should be",
+
+
+        "Want_to_graph_CSV_data": false,
+
+        "CUSTOM_PROX_DATA" : ["TimeInMS", "left_side"],
+
+        "startTime" : [1654894288738],
+
+        "endTime" : [1654894288828],
+
+
+    "This is for user to choose which function to run": "These functions were written by Ron Domingo and Stehpenie Blankey, if want to run just toggle True or False if want to run any function",
+
+
+        "TOF_area" : false,
+
+        "no_prox_reading_errors" : false,
+
+        "Log_message_errors" : false,
+
+        "nav_falling" : false,
+
+        "autonomy_summary": false,
+
+        "no_left" : false,
+
+        "no_right" : false,
+
+    
+    "This is for user to use to count how many time that value happen for the specific data(comment) ": "Please dont erase (Value) and Still implenting the plot for this function",
+    
+        "Data_CSV_Count_Error" :false,
+
+        "CSV_count" : ["Value","left_side", "left_corner", "left_front", "right_side", "right_corner", "right_front", "center_bump"],
+
+        "values" : [1],
+
+
+    "This is for parse specific Event in the log" : "It will print the message from start string to endstring",
+
+    "Important Notice": "It would be alot better to use timestamp instead just word of strings only because some of messages are repeated",
+
+    "For the case where it may have same timestamp" : "just need to specify the string and timestamp at the same time, for example: (1654893613529) : svc_docking.cc:488",
+
+        
+        "Find_Event": false,
+
+        "start_string":["cleaning_progress.cc:298 AUTONOMY STATES changed in SetAutonomyStateTimestamp due to UNDOCKING:"],
+
+        "endstring":["cleaning_progress.cc:301 UNDOCKING_AFTER_SUSPENDED : -1"],
+
+
+    "Find The state of the Robot": "Toggle True to use function",
+        
+        "change_State" : true,
+
+        
+
+        "Data_CSV" :true,
+
+        "CSV_specfic_data" : ["TimeInMS","left_side", "left_corner", "left_front", "right_side", "right_corner", "right_front", "center_bump"],
+
+        "Input_values" : [1]
+
+    
+    
+}
